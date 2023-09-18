@@ -64,7 +64,7 @@ char **global_argv;
 char **my_argv_list;   // jesse
 struct sockaddr_in name;
 int isparent = 1;
-int listensocket, sock;
+int listensocket;
 FILE *passwdfile = NULL, *groupfile = NULL, *devnull;
 struct sockaddr_in remotename;
 char *remotehostname = NULL;
@@ -76,6 +76,10 @@ struct bftpd_list_element *child_list;
 /* Command line parameters */
 char *configpath = PATH_BFTPD_CONF;
 int daemonmode = 0;
+
+/* scripts to run before and after writing to the file system */
+char *pre_write_script;
+char *post_write_script;
 
 void print_file(int number, char *filename)
 {

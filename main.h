@@ -22,12 +22,12 @@ extern int control_timeout, data_timeout;
 extern int alarm_type;
 
 /* Command line options */
-char *configpath;
-int daemonmode;
+extern char *configpath;
+extern int daemonmode;
 
 /* scripts to run before and after writing to the file system */
-char *pre_write_script;
-char *post_write_script;
+extern char *pre_write_script;
+extern char *post_write_script;
 
 
 void print_file(int number, char *filename);
